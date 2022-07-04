@@ -1,0 +1,26 @@
+.filter_field {
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.filter_field input {
+  width: 100%;
+  max-width: 250px;
+  box-sizing: border-box;
+  padding: 4px 5px;
+  border: 1px solid #fff1;
+  border-radius: 3px;
+  background: #fff1;
+  font-family: segoe ui;
+  transition: all .2s ease;
+  font-size: 13px;
+}
+.filter_field input:focus {
+  background: #0002;
+  border-color: #36d;
+  box-shadow: 0px 0px 10px #04c6;
+}
+.right_tip {
+  padding: 15px;
+  color: #789;
+}

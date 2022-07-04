@@ -1,0 +1,13 @@
+{
+  "c1":["Alkali metals","4488ff"],
+  "c2":["Alkaline earth metals","44df88"],
+  "c3":["Lanthanoids","bc3525"],
+  "c4":["Actinoids","ffaa00"],
+  "c5":["Transition metals","aa44ff"],
+  "c6":["Post-transition metals","aa7733"],
+  "c7":["Metalloids","485969"],
+  "c8":["Noble gases","dddd49"],
+  "c9":["Halogens","008833"],
+  "c10":["Other nonmetals","de2555"],
+  "c11":["Unidentified ","acacac"]
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/fontawesome-free-5.7.2-web/css/all.min.css">
+	  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+	  <link rel="stylesheet" type="text/css" href="css/elem_right.css">
+    <script type="text/javascript" src="js/resp.js"></script>
+	  <script type="text/javascript" src="js/main.js"></script>
+    <link rel="shortcut icon" href="assets/logo.png">
+    <title>Periodic Table</title>
+    <meta name="description" content="This is an interactive periodic table website. You can find appearance, atomic mass, boiling point, melting point, category, density, discovered person, molar heat, period, phase in different temperatures, electron configuration, electron affinity, electronegativity, ionization energies, etc. We made this to support students who learn chemistry. Created by Radons Group. ">
+  </head>
+  <body>
+    <div class="mobile_menu" style="display: none;">
+      <div class="mobile_menu_header">
+        <a href="./">Periodic Table</a>
+      </div>
+    </div>
+    <div class="body">
+      <div class="left">
+        <header>
+          <a href="" id="main_text">Periodic Table</a>
+        </header>
+        <div class='cls_elem'>
+          <div class='cls_elem_title' id="categoryChangeBtn">
+            <div class="cls_elem_title_label">Categories</div>
+          </div>
+          <div class='cls_elem_btns' id="forNormalCateSys">
+            <button><i class='fa fa-dot-circle'></i> <span>Alkali Metals</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Alkaline Metals</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Lanthanoids</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Actinoids</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Transition Metals</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Post-transition Metals</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Metalloids</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Noble Gases</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Halogens</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Other Nonmetals</span> </button>
+            <!-- <button><i class='fa fa-dot-circle'></i> <span>Unidentified</span> </button> -->
+          </div>
+          <div class='cls_elem_btns' style="display: none;" id="forDensityCateSys">
+            <button><i class='fa fa-dot-circle'></i> <span>Alkali Metals</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Alkaline Metals</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Lanthanoids</span> </button>
+            <button><i class='fa fa-dot-circle'></i> <span>Actinoids</span> </button>
+          </div>
+        </div>
+        <div class="filter_elems">
+          <form class="filter" action="./" method="get">
+            <input type="text" id="filter_elems_inp" name="filter" placeholder="Search elements" title="" required spellcheck="false" autocomplete="off">
+          </form>
+        </div>
+        <div class="chartz_btn_set">
+          <a href="charts.php">Charts</a>
+          <!-- &nbsp; -->
+          <!-- <a href="combine.php">Combiner</a> -->
+          <!-- &nbsp; -->
+          <!-- <a href="db.php">Database</a> -->
+        </div>
+      </div><div class="mid" tabindex="0">
+        <div class="table_div_hey_big">
+          <table class="perTable"><tr class="cols"><td class="d"></td><td class="d" id="col1">1</td><td class="d" id="col2">2</td><td class="d" id="col3">3</td><td class="d" id="col4">4</td><td class="d" id="col5">5</td><td class="d" id="col6">6</td><td class="d" id="col7">7</td><td class="d" id="col8">8</td><td class="d" id="col9">9</td><td class="d" id="col10">10</td><td class="d" id="col11">11</td><td class="d" id="col12">12</td><td class="d" id="col13">13</td><td class="d" id="col14">14</td><td class="d" id="col15">15</td><td class="d" id="col16">16</td><td class="d" id="col17">17</td><td class="d" id="col18">18</td></tr><tr name="row1"><td class="d" id="row1">1</td><td id="e1">H</td><td class="d"></td><td class="d"></td><td class="d infoTdEleBoxTd"><div id="infoTdEleBox"><i>1</i><u>1</u><s><i class="fa fa-dot-circle"></i></s><div class="infoBox_elem_inf"><b>H</b><span>Hydrogen</span></div></div></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d temp_keys_feat_td"><div class="temp_keys_feat"><div><i class="fa fa-square" style="color:#333;"></i> Solid</div><div><i class="fa fa-square" style="color:#36c;"></i> Liquid</div><div><i class="fa fa-square" style="color:#888;"></i> Gas</div><div><i class="fa fa-square" style="color:#000;"></i> Unidentified</div></div></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td id="e2">He</td></tr><tr name="row2"><td class="d" id="row2">2</td><td id="e3">Li</td><td id="e4">Be</td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td id="e5">B</td><td id="e6">C</td><td id="e7">N</td><td id="e8">O</td><td id="e9">F</td><td id="e10">Ne</td></tr><tr name="row3"><td class="d" id="row3">3</td><td id="e11">Na</td><td id="e12">Mg</td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td id="e13">Al</td><td id="e14">Si</td><td id="e15">P</td><td id="e16">S</td><td id="e17">Cl</td><td id="e18">Ar</td></tr><tr name="row4"><td class="d" id="row4">4</td><td id="e19">K</td><td id="e20">Ca</td><td id="e21">Sc</td><td id="e22">Ti</td><td id="e23">V</td><td id="e24">Cr</td><td id="e25">Mn</td><td id="e26">Fe</td><td id="e27">Co</td><td id="e28">Ni</td><td id="e29">Cu</td><td id="e30">Zn</td><td id="e31">Ga</td><td id="e32">Ge</td><td id="e33">As</td><td id="e34">Se</td><td id="e35">Br</td><td id="e36">Kr</td></tr><tr name="row5"><td class="d" id="row5">5</td><td id="e37">Rb</td><td id="e38">Sr</td><td id="e39">Y</td><td id="e40">Zr</td><td id="e41">Nb</td><td id="e42">Mo</td><td id="e43">Tc</td><td id="e44">Ru</td><td id="e45">Rh</td><td id="e46">Pd</td><td id="e47">Ag</td><td id="e48">Cd</td><td id="e49">In</td><td id="e50">Sn</td><td id="e51">Sb</td><td id="e52">Te</td><td id="e53">I</td><td id="e54">Xe</td></tr><tr name="row6"><td class="d" id="row6">6</td><td id="e55">Cs</td><td id="e56">Ba</td><td class="dnum" id="e57e71">57-71</td><td id="e72">Hf</td><td id="e73">Ta</td><td id="e74">W</td><td id="e75">Re</td><td id="e76">Os</td><td id="e77">Ir</td><td id="e78">Pt</td><td id="e79">Au</td><td id="e80">Hg</td><td id="e81">Tl</td><td id="e82">Pb</td><td id="e83">Bi</td><td id="e84">Po</td><td id="e85">At</td><td id="e86">Rn</td></tr><tr name="row7"><td class="d" id="row7">7</td><td id="e87">Fr</td><td id="e88">Ra</td><td class="dnum" id="e89e103">89-103</td><td id="e104">Rf</td><td id="e105">Db</td><td id="e106">Sq</td><td id="e107">Bh</td><td id="e108">Hs</td><td id="e109">Mt</td><td id="e110">Ds</td><td id="e111">Rg</td><td id="e112">Cn</td><td id="e113">Nh</td><td id="e114">Fl</td><td id="e115">Mc</td><td id="e116">Lv</td><td id="e117">Ts</td><td id="e118">Og</td></tr><tr name="row8"><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td></tr><tr name="row6"><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td id="e57">La</td><td id="e58">Ce</td><td id="e59">Pr</td><td id="e60">Nd</td><td id="e61">Pm</td><td id="e62">Sm</td><td id="e63">Eu</td><td id="e64">Gd</td><td id="e65">Tb</td><td id="e66">Dy</td><td id="e67">Ho</td><td id="e68">Er</td><td id="e69">Tm</td><td id="e70">Yb</td><td id="e71">Lu</td></tr><tr name="row7"><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td id="e89">Ac</td><td id="e90">Th</td><td id="e91">Pa</td><td id="e92">U</td><td id="e93">Np</td><td id="e94">Pu</td><td id="e95">Am</td><td id="e96">Cm</td><td id="e97">Bk</td><td id="e98">Cf</td><td id="e99">Es</td><td id="e100">Fm</td><td id="e101">Md</td><td id="e102">No</td><td id="e103">Lr</td></tr><tr name="row8"><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td><td class="d"></td></tr> </table>
+          <div class="bar_of_pertable_details">
+            <button class="maximize_window_btn" id="get_elemes_data" data-elem="e1"><span id="seleEleDete">Element</span>'s Details &nbsp; <i class="fa fa-caret-down"></i></button>
+            <div class="temperature_div">
+              <input type="range" name="temp" id="temperature" value="298" min="0" max="6000">
+              <button title="Set to room temperature">298</button>
+            </div>
+            <div class="mobile_links_chance">
+              <a href="charts.php">Charts</a>
+            </div>
+          </div>
+        </div>
+        <footer>
+          Designed for Chemistry students | <a href="about.html" class="reg">About Site</a> <br>
+          Copyright &copy; 2019 Copyright Holder All Rights Reserved.
+        </footer>
+      </div><div class="right">
+        <!-- <div class="right_menu">
+          <button class="a" data-act="list">List</button>
+          <button data-act="dets">Details</button>
+        </div> -->
+        <div class="right_dyn_cont">
+
+        </div>
+      </div>
+    </div>
+    <div class="mobile_options">
+
+    </div>
+    <footer id="mobFooter" style="display: none;">
+      Designed for Chemistry students | <a href="about.html" class="reg">About Site</a> <br>
+      Copyright &copy; 2019 Copyright Holder All Rights Reserved.
+    </footer>
+    <script src="js/periodic_table.js" charset="utf-8"></script>
+  </body>
+</html>

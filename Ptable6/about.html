@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Periodic Table Web</title>
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/fontawesome-free-5.7.2-web/css/all.min.css">
+    <link rel="shortcut icon" href="assets/logo.png">
+    <style media="screen">
+      body {
+        background: #aaa;
+        line-height: 1.618;
+        color: #222;
+        text-align: center;
+        font-family: georgia;
+      }
+      .body {
+        text-align: left;
+        max-width: 700px;
+        min-height: 100vh;
+        background: #fff9;
+        display: inline-block;
+        box-shadow: 0px 0px 15px #0002;
+      }
+      * {
+        margin:0;
+      }
+      h1 {
+        text-align: center;
+        padding: 5px 15px;
+        font-size: 55px;
+        position: relative;
+        height: 50vh;
+        background: #1f2833;
+        margin-bottom: 5px;
+      }
+      h1 span {
+        position: absolute;
+        top: 50%;
+        color: #66fcf1;
+        left: 0;
+        transform: translate(0%,-50%);
+        width: 100%;
+      }
+      h2 {
+        padding: 5px 10px;
+      }
+      p {
+        padding: 5px 10px;
+      }
+      a {
+        color: #00f;
+        text-decoration: none;
+      }
+      div.our_links {
+        text-align: center;
+      }
+      div.our_links a {
+        color: inherit;
+        font-size: 35px;
+        padding: 10px;
+      }
+      input {
+        border-radius: 3px;
+        width: 45%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <h1><span>About Website</span> </h1>
+      <h2>What are the uses of this Periodic Table website?</h2>
+      <p>
+        <ol>
+          <li>find elements data (atomic number, appearance, name, symbol, category, atomic mass, melting point, boiling point, phase , density, molar heat, etc.)</li>
+          <li>create a link for a certain element</li>
+          <li>see phases of elements in different temperatures</li>
+          <li>find elements by name or atomic number, easily</li>
+          <li>find charts of electronegativities and ionization energies </li>
+        </ol>
+      </p>
+      <h2>How was this made?</h2>
+      <p>I used jQuery, Font Awesome, PeriodicTableJSON(database of elements) and Charts.js as plugins. </p>
+      <p>The web pages are made with HTML, CSS and JavaScript. I used a JSON file to get elements data. -> Periodic-Table-JSON <a href="https://github.com/Bowserinator/Periodic-Table-JSON" target="_blank">github link.</a>  </p>
+      <p>To create the charts page we used Charts.js. <a href="https://github.com/chartjs/Chart.js" target="_blank">github link.</a> </p>
+      <h2>Who made this?</h2>
+      <p>Rushan Edward. <a href="mailto:rushanedward1@gmail.com">gmail</a>(<span style="-webkit-user-select:all;">rushanedward1@gmail.com</span>). </p>
+      <h2>Link us !</h2>
+      <p>Link my website in your web pages.</p>
+      <center>
+        <input type="text" value="<a href='https://periodictableweb.000webhostapp.com'>Periodic Table</a>" style="margin: 10px;padding: 10px;white-space: nowrap;min-width: 200px;border: 1px solid #15d;font-family: georgia;color: #333;" spellcheck="false">
+      </center>
+      <div class="our_links">
+        <a href="https://web.facebook.com/periodictableinchemistry/" target="_blank"> <i style="color: #13d;" class="fab fa-facebook"></i> </a>
+      </div>
+    </div>
+  </body>
+</html>

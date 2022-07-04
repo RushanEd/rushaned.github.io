@@ -1,0 +1,127 @@
+.elem_right {
+  white-space: normal;
+}
+.elem_right *:not(i) {
+  font-family: segoe ui;
+}
+.elem_pagg button {
+  width: 50%;
+  padding: 8px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  background: #fff1;
+  box-sizing: border-box;
+}
+.elem_pagg button:hover {
+  background: #fff2;
+}
+.elem_pagg button * {
+  vertical-align: middle;
+}
+.elem_pagg button span {
+  font-size: 20px;
+}
+.elem_pagg button i {
+  padding: 0px 10px;
+  font-size: 13px;
+}
+.elem_big_card {
+  position: relative;
+  text-align: center;
+}
+.elem_big_card_cont {
+  display: block;
+  position: relative;
+  background: #0001;
+  height: 140px;
+}
+.elem_big_card_cont div {
+  position: absolute;
+  font-size: 75px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.elem_big_card_cont div span {
+  font-family: georgia;
+}
+.elem_right_atomicNumber,.elem_right_mass_number {
+  position: absolute;
+  bottom: 0;
+  font-size: 13px;
+  font-style: normal;
+  transform: translate(-130%,0%);
+  left: 0;
+}
+.elem_right_mass_number {
+  bottom: auto;
+  top: 0;
+}
+.elem_right_details {
+  padding-top: 10px;
+}
+.elem_right_set_det {
+  margin: 6px 15px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-radius: 7px;
+  font-size: 13px;
+  background: #ffffff05;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px #0002;
+}
+.elem_right_det_set_title {
+  padding: 10px 14px;
+  font-size: 17px;
+  font-weight: bold;
+  position: relative;
+  color: #27c;
+}
+.x29 {
+  font-weight: bold;
+  padding: 4px 14px;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  width: 50%;
+}
+.x21 {
+  padding: 0px 14px;
+  display: inline-block;
+  box-sizing: border-box;
+  -webkit-user-select: all;
+  vertical-align: middle;
+  width: 50%;
+  margin-bottom: 6px;
+}
+.boilingPointTd::after,.meltingPointTd::after {
+  content: " K";
+}
+.densityTd::after {
+  content: " g/L"
+}
+.summary_new {
+  padding: 10px;
+  padding-bottom: 0;
+  color: #9cf;
+  text-indent: 23px;
+  line-height: 1.5;
+}
+.elem_right_external {
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.elem_right_external a {
+  padding: 8px;
+  color: #fff;
+  margin-right: 5px;
+  background: #fff1;
+  border-radius: 3px;
+}
+.elem_right_external a:hover {
+  background: #fff2;
+}
