@@ -1,0 +1,92 @@
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+header {
+     padding: 10px;
+     background: #3367d3;
+     color: #ffffff;
+     font-size: 30px;
+}
+input,button {
+     background: transparent;
+     color: inherit;
+     outline: none;
+     border: none;
+}
+button {
+     cursor: pointer;
+}
+body {
+     margin: 0;
+     font-family: calibri;
+}
+header button {
+     float: right;
+     padding: 10px;
+     background: #335599;
+     border: 2px solid black;
+     border-radius: 3px;
+}
+header button:hover {
+     background: black;
+}
+div.menu {
+     padding: 0px 10px;
+}
+div.menu button {
+     padding: 5px;
+}
+div.menu button:hover {
+     background: #dddddd;
+}
+div.menu button.a {
+     font-weight: bold;
+     background: #cccccc;
+}
+.body {
+     padding: 10px;
+     background: #cccccc;
+}
+.body button {
+     padding: 5px;
+     border-radius: 2px;
+     border: 1px solid black;
+     margin: 3px;
+     background: #454545;
+     color: #ffffff;
+}
+td .a {
+     border: 4px solid #aa4511;
+}
+.body span {
+     width: 19%;
+     margin: 1%;
+     display: inline-block;
+     vertical-align: top;
+     text-align: center;
+     font-size: 17px;
+}
+span img {
+     width: 100%;
+}
+rad {
+     position: relative;
+     width: 15px;
+     height: 15px;
+     border: 1px solid grey;
+     border-radius: 50px;
+     display: inline-block;
+     cursor: pointer;
+     vertical-align: middle;
+}
+rad.a {
+     background: #3367d3;
+}
+div.cont {
+     display: none;
+}
+#contTable {
+     display: block;
+}

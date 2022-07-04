@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body title="Click to preview more closely">
+    <style>
+    body {
+         overflow: hidden;
+         cursor: pointer;
+         background: #1f2833;
+    }
+        svg {
+            position: relative;
+        }
+        .ad {
+            animation: rot 5s infinite;
+            transform-origin: 125px 125px;
+            animation-timing-function: linear;
+        }
+        @keyframes rot {
+            0%{transform: rotate(0deg);}
+            25%{transform: rotate(90deg);}
+            50%{transform: rotate(180deg);}
+            75%{transform: rotate(270deg);}
+            100%{transform: rotate(360deg);}
+        }
+    </style>
+    <svg width="450" height="450">
+        <circle cx="125" cy="125" r="100" stroke="#c5c6c7" stroke-width="1" fill="#1f2833" />
+        <circle cx="125" cy="125" r="80" stroke="#c5c6c7" stroke-width="1" fill="#1f2833" />
+        <circle cx="125" cy="125" r="60" stroke="#c5c6c7" stroke-width="1" fill="#1f2833" />
+        <circle cx="125" cy="125" r="40" stroke="#c5c6c7" stroke-width="1" fill="#1f2833" />
+        <circle cx="125" cy="125" r="10" stroke="black" stroke-width="1" fill="#c5c6c7" />
+        <circle class="ad" cx="97" cy="97" r="5" stroke="black" stroke-width="1" fill="#dedede" />
+    </svg>
+</body>
+</html>

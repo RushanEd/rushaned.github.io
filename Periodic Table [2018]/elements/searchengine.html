@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Search engine</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<script src="../../jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/elements.js"></script>
+	    <script type="text/javascript" src="../js/colors.js"></script>
+		<link rel="stylesheet" href="../css/pageset.css">
+		<link rel="stylesheet" href="../../fontawesome-free-5.2.0-web/css/all.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<script type="text/javascript" src="../js/tipuesearch/tipuesearch.js"></script>
+		<script type="text/javascript" src="../js/tipuesearch/tipuesearch_set.js"></script>
+	    <script type="text/javascript" src="../js/tipuesearch/tipuesearch_content.js"></script>
+     	<script type="text/javascript" src="../js/tipuesearch/tipuesearch.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<a href="../index.html" class="per"><i class="fa fa-angle-double-left"></i> Periodic table</a> <center><a href="searchengine.html">Search engine</a> <form action="searchengine.html" accept-charset="ISO-8859-1"><input spellcheck="false" type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required class="searchEngine" autocomplete=off><button><i class="fa fa-search"></i></button></form></center>
+		</header>
+		<center><div id="tipue_search_content"></div></center>
+		<script>
+     $(document).ready(function() {
+          $('#tipue_search_input').tipuesearch();
+          var c=$('title').text();
+          var val=$('input').val();
+     });
+     </script>
+
+	</body>
+</html>

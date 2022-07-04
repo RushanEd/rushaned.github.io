@@ -1,0 +1,652 @@
+ <!DOCTYPE html><html>
+<head><title>Online Periodic Table</title>
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <script src="js/jquery.min.js"></script>
+     <link rel="stylesheet" href="css/main.css">
+     <script src="js/colors.js" charset="utf-8"></script>
+		 <script src="js/elements.js" charset="utf-8"></script>
+     <!--<script src="js/elements2.js" charset="utf-8"></script>-->
+     <script src="js/unitconverter.js" charset="utf-8"></script>
+	 <script src="js/main.js" charset="utf-8"></script>
+	 <script src="js/search.js" charset="utf-8"></script>
+     <link rel="stylesheet" href="../../fontawesome-free-5.2.0-web/css/all.min.css">
+     <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">-->
+     <link rel="stylesheet" href="js/jquery-ui.css">
+     <script src="js/jquery-1.12.4.js"></script>
+     <script src="js/jquery-ui.js"></script>
+     <link rel="shortcut icon" href="images/tlogo.png">
+</head><body style="font-family:calibri;margin:0;" onload="CIDSIR();">
+	<script type="text/javascript">
+		function CIDSIR() {
+               if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+								 location.href="mindex.html"
+                	//(function() { var css = document.createElement('script'); css.src ='js/mobile-main.js'; document.getElementsByTagName('head')[0].appendChild(css); })();
+               }
+		}
+    CIDSIR();
+	</script>
+    <noscript><h1>Please allow javascript</h1></noscript>
+
+    <div class="mobile"> </div>
+     <div class="black" id="blackWall" oncontextmenu="return false;"></div>
+		 <div class="white" id="whiteWall" oncontextmenu="return false;" style="display:none;"></div>
+		 <div id="IW" oncontextmenu="return false;"></div>
+     <header style="background:#3367d3;font-size:25px;color:white;position: relative;z-index: 5;">
+          <a href="index.html"><img src="images/logo.png"> Online Periodic Table</a>
+          <!--<div class="floatRight">
+            <button class="contentOp">Content <i class="fa fa-chevron-down"></i> </button>
+            <div class="slideDownops">
+            	<button id="contentInd">Industrial </button>
+            	<button id="contentChem">Chemical </button>
+            	<button id="contentWiki">Wikipedia </button>
+            </div>
+          </div>-->
+          <form><input spellcheck="false"><button onclick="return false;"><i class="fa fa-search"></i></button></form>
+          <!--<div class="rightFloated">
+          	<a href="javascript:void(0);" id="optionsLefted"><i class="fa fa-bars"></i></a>
+          	<div class="optionsLeftedList">
+							<a href="javascript:void(0);" id="advancedSearch"><i class="fa fa-search-plus"></i> Advanced search</a>
+							<a href="javascript:void(0);" id="printTable"><i class="fa fa-print"></i> Print</a>
+							<a href="elements/searchengine.html" target="_blank"><i class="fa fa-list-ul"></i> Search engine</a>
+							<a href="javascript:void(0);" id="aboutSite"><i class="fa fa-exclamation-circle"></i> About</a>
+          		<a href="elements/radon.html" target="_blank"><img src="images/logoi.png" style="height:35px;"> Radon Networks</a>
+          	</div>
+          </div>-->
+     </header>
+     <div class="line">
+          <div id="all">
+          	<div class="left">
+               <b id="classiBtn">Classification <i class="fa fa-chevron-down"></i></b>
+               <div class="classes">
+               	<a href="javascript:void(0);" class="a" id="metallicc" title="Categorize elements according to it's metallic ">Metallic</a>
+                    <a href="javascript:void(0);" id="phasec" title="Categorize according to phase">Phase</a>
+                    <a href="javascript:void(0);" id="electronegativityc" title="Categorize according to electronegativity">Electronegativity</a>
+               	<a href="javascript:void(0);" id="valancyc" title="Categorize according to element's valence">Valancy</a>
+               	<a href="javascript:void(0);" id="densityc" title="Categorize according to element's density">Density</a>
+               </div>
+               <div class="classCat" id="classCat">Metallic</div>
+               <catset id="metallicClass"><div class="one">
+                    <span class="title" id="Metals">Metals</span>
+                    <a href="#cat=Alkali" id="Alkali"><span></span> Alkali metals</a>
+                    <a href="#cat=Alkaline" id="Alkaline"><span></span> Alkaline earth metals</a>
+                    <a href="#cat=Lanthanoids" id="Lanthanoids"><span></span> Lanthanoids</a>
+                    <a href="#cat=Actinoids" id="Actinoids"><span></span> Actinoids</a>
+                    <a href="#cat=Transition" id="Transition"><span></span> Transition metals</a>
+                    <a href="#cat=PostTransition" id="PostTransition"><span></span> Post-transition metals</a>
+               </div><br>
+               <a href="#cat=Metalloids" id="Metalloids"><span></span> Metalloids</a><br>
+               <div class="one">
+                    <span class="title" id="Nonmetals">Nonmetals</span>
+                    <a href="#cat=Noble" id="Noble"><span></span> Noble gases</a>
+                    <a href="#cat=Halogens" id="Halogens"><span></span> Halogens</a>
+                    <a href="#cat=Other" id="Other"><span></span> Other nonmetals</a>
+               </div>
+               <a href="#cat=Unidentified" id="Unidentified"><span></span> Unidentified</a></catset>
+               <catset id="phaseClass"><a href="javascript:void(0);" id="Solid"><span></span> Solid</a>
+               <a href="javascript:void(0);" id="Liquid"><span></span> Liquid</a>
+               <a href="javascript:void(0);" id="Gas"><span></span> Gas</a>
+               <a href="javascript:void(0);" id="Unknown"><span></span> Unknown</a></catset>
+               <catset id="valancyClass">
+               	<a href="javascript:void(0);" id="vale0"><span></span> Valence 0</a>
+               	<a href="javascript:void(0);" id="vale1"><span></span> Valence 1</a>
+               	<a href="javascript:void(0);" id="vale2"><span></span> Valence 2</a>
+               	<a href="javascript:void(0);" id="vale3"><span></span> Valence 3</a>
+               	<a href="javascript:void(0);" id="vale4"><span></span> Valence 4</a>
+               	<a href="javascript:void(0);" id="vale5"><span></span> Valence 5</a>
+               	<a href="javascript:void(0);" id="vale6"><span></span> Valence 6</a>
+               	<a href="javascript:void(0);" id="vale7"><span></span> Valence 7</a>
+           </catset>
+           	<catset id="densityClass">
+           		<a href="javascript:void(0);" id="d001_1"><span></span> x&lt;1 g/mol</a>
+           		<a href="javascript:void(0);" id="d1_3"><span></span> 1-3 g/mol</a>
+           		<a href="javascript:void(0);" id="d3_6"><span></span> 3-6 g/mol</a>
+           		<a href="javascript:void(0);" id="d6_9"><span></span> 6-9 g/mol</a>
+           		<a href="javascript:void(0);" id="d9_12"><span></span> 9-12 g/mol</a>
+           		<a href="javascript:void(0);" id="d12_15"><span></span> 12-15 g/mol</a>
+           		<a href="javascript:void(0);" id="d15_18"><span></span> 15-18 g/mol</a>
+           		<a href="javascript:void(0);" id="d18"><span></span> x>18 g/mol</a>
+           	</catset>
+           	<catset id="electronegativityClass">
+           		<a href="javascript:void(0);" id="en0"><span></span> 0 </a>
+           		<a href="javascript:void(0);" id="en1_2"><span></span> 0 - 1 </a>
+           		<a href="javascript:void(0);" id="en2_3"><span></span> 1 - 1.5 </a>
+           		<a href="javascript:void(0);" id="en3_4"><span></span> 1.5 - 2 </a>
+           		<a href="javascript:void(0);" id="en4_5"><span></span> 2 - 2.5 </a>
+           		<a href="javascript:void(0);" id="en5_6"><span></span> 2.5 - 3 </a>
+           		<a href="javascript:void(0);" id="en6_7"><span></span> 3 - 3.5 </a>
+           		<a href="javascript:void(0);" id="en7_8"><span></span> 3.5 - 4 </a>
+           	</catset>
+          </div><div class="body">
+               <table class="perTable">
+                         <tr class="cols">
+                              <td class="d"></td>
+                              <td class="d" id="col1">1</td>
+                              <td class="d" id="col2">2</td>
+                              <td class="d" id="col3">3</td>
+                              <td class="d" id="col4">4</td>
+                              <td class="d" id="col5">5</td>
+                              <td class="d" id="col6">6</td>
+                              <td class="d" id="col7">7</td>
+                              <td class="d" id="col8">8</td>
+                              <td class="d" id="col9">9</td>
+                              <td class="d" id="col10">10</td>
+                              <td class="d" id="col11">11</td>
+                              <td class="d" id="col12">12</td>
+                              <td class="d" id="col13">13</td>
+                              <td class="d" id="col14">14</td>
+                              <td class="d" id="col15">15</td>
+                              <td class="d" id="col16">16</td>
+                              <td class="d" id="col17">17</td>
+                              <td class="d" id="col18">18</td>
+                         </tr>
+                         <tr name="row1">
+                              <td class="d" id="row1">1</td>
+                              <td id="e1">H</td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"><div class="det"><i id="elementId"></i>
+                    <h1 id="elementSymbol"><span style="color:grey;">H</span></h1>
+                    <p id="elementName"><span style="color:grey;">Hydrogen</span> </p>
+               </div></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td id="e2">He</td>
+                         </tr>
+                         <tr name="row2">
+                              <td class="d" id="row2">2</td>
+                              <td id="e3">Li</td>
+                              <td id="e4">Be</td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td id="e5">B</td>
+                              <td id="e6">C</td>
+                              <td id="e7">N</td>
+                              <td id="e8">O</td>
+                              <td id="e9">F</td>
+                              <td id="e10">Ne</td>
+                         </tr>
+                         <tr name="row3">
+                              <td class="d" id="row3">3</td>
+                              <td id="e11">Na</td>
+                              <td id="e12">Mg</td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td id="e13">Al</td>
+                              <td id="e14">Si</td>
+                              <td id="e15">P</td>
+                              <td id="e16">S</td>
+                              <td id="e17">Cl</td>
+                              <td id="e18">Ar</td>
+                         </tr>
+                         <tr name="row4">
+                              <td class="d" id="row4">4</td>
+                              <td id="e19">K</td>
+                              <td id="e20">Ca</td>
+                              <td id="e21">Sc</td>
+                              <td id="e22">Ti</td>
+                              <td id="e23">V</td>
+                              <td id="e24">Cr</td>
+                              <td id="e25">Mn</td>
+                              <td id="e26">Fe</td>
+                              <td id="e27">Co</td>
+                              <td id="e28">Ni</td>
+                              <td id="e29">Cu</td>
+                              <td id="e30">Zn</td>
+                              <td id="e31">Ga</td>
+                              <td id="e32">Ge</td>
+                              <td id="e33">As</td>
+                              <td id="e34">Se</td>
+                              <td id="e35">Br</td>
+                              <td id="e36">Kr</td>
+                         </tr>
+                         <tr name="row5">
+                              <td class="d" id="row5">5</td>
+                              <td id="e37">Rb</td>
+                              <td id="e38">Sr</td>
+                              <td id="e39">Y</td>
+                              <td id="e40">Zr</td>
+                              <td id="e41">Nb</td>
+                              <td id="e42">Mo</td>
+                              <td id="e43">Tc</td>
+                              <td id="e44">Ru</td>
+                              <td id="e45">Rh</td>
+                              <td id="e46">Pd</td>
+                              <td id="e47">Ag</td>
+                              <td id="e48">Cd</td>
+                              <td id="e49">In</td>
+                              <td id="e50">Sn</td>
+                              <td id="e51">Sb</td>
+                              <td id="e52">Te</td>
+                              <td id="e53">I</td>
+                              <td id="e54">Xe</td>
+                         </tr>
+                         <tr name="row6">
+                              <td class="d" id="row6">6</td>
+                              <td id="e55">Cs</td>
+                              <td id="e56">Ba</td>
+                              <td class="dnum" id="e57e71">57-71</td>
+                              <td id="e72">Hf</td>
+                              <td id="e73">Ta</td>
+                              <td id="e74">W</td>
+                              <td id="e75">Re</td>
+                              <td id="e76">Os</td>
+                              <td id="e77">Ir</td>
+                              <td id="e78">Pt</td>
+                              <td id="e79">Au</td>
+                              <td id="e80">Hg</td>
+                              <td id="e81">Tl</td>
+                              <td id="e82">Pb</td>
+                              <td id="e83">Bi</td>
+                              <td id="e84">Po</td>
+                              <td id="e85">At</td>
+                              <td id="e86">Rn</td>
+                         </tr>
+                         <tr name="row7">
+                              <td class="d" id="row7">7</td>
+                              <td id="e87">Fr</td>
+                              <td id="e88">Ra</td>
+                              <td class="dnum" id="e89e103">89-103</td>
+                              <td id="e104">Rf</td>
+                              <td id="e105">Db</td>
+                              <td id="e106">Sq</td>
+                              <td id="e107">Bh</td>
+                              <td id="e108">Hs</td>
+                              <td id="e109">Mt</td>
+                              <td id="e110">Ds</td>
+                              <td id="e111">Rg</td>
+                              <td id="e112">Cn</td>
+                              <td id="e113">Nh</td>
+                              <td id="e114">Fl</td>
+                              <td id="e115">Mc</td>
+                              <td id="e116">Lv</td>
+                              <td id="e117">Ts</td>
+                              <td id="e118">Og</td>
+                         </tr>
+                         <tr name="row8">
+                              <td class="d" id="row8">8</td>
+                              <td id="e119">Uue</td>
+                              <td id="e120">Ubn</td>
+                              <td class="dnum" id="e121e126">121-126</td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                         </tr>
+
+                         <tr name="row6">
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td id="e57">La</td>
+                              <td id="e58">Ce</td>
+                              <td id="e59">Pr</td>
+                              <td id="e60">Nd</td>
+                              <td id="e61">Pm</td>
+                              <td id="e62">Sm</td>
+                              <td id="e63">Eu</td>
+                              <td id="e64">Gd</td>
+                              <td id="e65">Tb</td>
+                              <td id="e66">Dy</td>
+                              <td id="e67">Ho</td>
+                              <td id="e68">Er</td>
+                              <td id="e69">Tm</td>
+                              <td id="e70">Yb</td>
+                              <td id="e71">Lu</td>
+                         </tr>
+                         <tr name="row7">
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td id="e89">Ac</td>
+                              <td id="e90">Th</td>
+                              <td id="e91">Pa</td>
+                              <td id="e92">U</td>
+                              <td id="e93">Np</td>
+                              <td id="e94">Pu</td>
+                              <td id="e95">Am</td>
+                              <td id="e96">Cm</td>
+                              <td id="e97">Bk</td>
+                              <td id="e98">Cf</td>
+                              <td id="e99">Es</td>
+                              <td id="e100">Fm</td>
+                              <td id="e101">Md</td>
+                              <td id="e102">No</td>
+                              <td id="e103">Lr</td>
+                         </tr>
+                         <tr name="row8">
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td id="e121">Ubu</td>
+                              <td id="e122">Ubb</td>
+                              <td id="e123">Ubt</td>
+                              <td id="e124">Ubq</td>
+                              <td id="e125">Ubp</td>
+                              <td id="e126">Ubh</td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                              <td class="d"></td>
+                         </tr>
+                    </table>
+
+          </div><div class="right">
+               <div class="options">
+                   <div class="op">
+                     <h3>Temperature</h3>
+                     <input max="6000" min="0" type="range" class="temp" value="295"><br>
+                     <input id="numTemp" type="number" max="6000" min="0" class="temp2" value="295"> <span style="font-size:30px;">K</span>
+                 </div>
+                <!--<div class="op" id="combOp">
+                     <h3><i class="fa fa-magic"></i> Combiner</h3>
+                     <button id="openComb">Open combiner</button>
+                </div>-->
+                <div class="op">
+									<!--<button class="kkl" id="showActivitySeries">Activity series</button>-->
+									<button class="kkl" id="giveFeedBack" onclick="window.open('elements/cont.html','_blank');"><i class="fa fa-phone"></i> Contact us</button>
+									<button class="kkl" onclick="window.open('elements/db.html','_blank');"><i class="fa fa-database"></i> Database</button>
+                </div>
+               </div>
+          </div>
+          </div>
+     </div>
+     <footer>
+			 Online Periodic Table - Radon Networks<br>
+     	<a href="javascript:copyStringToClipboard('Radon Networkssociety@gmail.com');alertm('Copied radonnetworks.86@gmail.com to clipboard')">radonnetworks.86@gmail.com</a> <a target="_blank" href="elements/more.html">More info.</a>
+     </footer>
+     <div id="activitySeries"><div><button class="print" title="Print"><i class="fa fa-print"></i></button><button class="close" title="Close"><i class="fa fa-times"></i></button></div><nav><table><tr><td>K</td></tr><tr><td>Na</td></tr><tr><td>Ca</td></tr><tr><td>Mg</td></tr><tr><td>Al</td></tr><tr><td>Zn</td></tr><tr><td>Fe</td></tr><tr><td>Sn</td></tr><tr><td>Pb</td></tr><tr><td>H</td></tr><tr><td>Cu</td></tr><tr><td>Hg</td></tr><tr><td>Ag</td></tr><tr><td>Pl</td></tr><tr><td>Au</td></tr></table></nav></div>
+     <div class="contextmenu">
+          <a href="" id="selectElement">Select element (<i></i>)</a>
+          <a href="" id="moreWiki" target="_blank">More info - Wiki</a>
+          <!--<a href="javascript:void(0);" id="openNewTab">Open new tab</a>-->
+     </div>
+     <div class="helpContext">
+          <a href="" id="whatAre">What are <this></this> ?</a>
+          <a href="" id="showOnlyCat">Show only <this></this></a>
+     </div>
+     <!--<div id="combiner">
+          <div class="menuComb">
+               <headerC>Combiner v1.2 &nbsp; <button onclick="clearData();"><i class="fa fa-undo-alt"></i> </button></headerC> <button id="closeMenuComb"><i class="fa fa-times"></i></button>
+          </div>
+          <drophere style="font-size: 27px;width:100%;text-align:center;display:block;position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);color:#1f2833;">Drag and drop elements here</drophere>
+          <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+          <div class="info">
+
+          </div>
+     </div>-->
+		 <!--<div id="advancedSearchBox" tabindex="0">
+			 <div class="headerOfABS">
+				 Advanced search database
+			 </div><div class="menuBarASB">
+				 <a href="javascript:void(0);" id="closeASB">X</a>
+			 </div>
+			 <div class="scrollerCoz">
+				 <table>
+  			 	<tr class="firsta">
+  					<td>Atomic number</td>
+  					<td>Name</td>
+  					<td>Symbol</td>
+  					<td>Category</td>
+  					<td>Atomic mass</td>
+  					<td>Discovered person(s)</td>
+  					<td>Melting point</td>
+  					<td>Boiling point</td>
+  					<td>Discovered year</td>
+  					<td>CAS number</td>
+  					<td>Electrons amount</td>
+  					<td>Protons amount</td>
+  					<td>Neutrons amount</td>
+  					<td>Valency</td>
+  					<td>Electronegativity</td>
+  					<td>Isotopes</td>
+  			 	</tr>
+  				<tr class="seconda">
+  					<td name="sea_i"><input placeholder="Enter keyword"></td>
+  					<td name="sea_name"><input placeholder="Enter keyword"></td>
+  					<td name="sea_symbol"><input placeholder="Enter keyword"></td>
+  					<td name="sea_classification"><input placeholder="Enter keyword"></td>
+  					<td name="sea_relativeAtomicMass"><input placeholder="Enter keyword"></td>
+  					<td name="sea_disBy"><input placeholder="Enter keyword"></td>
+  					<td name="sea_liquidIn"><input placeholder="Enter keyword"></td>
+  					<td name="sea_gasIn"><input placeholder="Enter keyword"></td>
+  					<td name="sea_yearDis"><input placeholder="Enter keyword"></td>
+  					<td name="sea_casNum"><input placeholder="Enter keyword"></td>
+  					<td name="sea_i"><input placeholder="Enter keyword"></td>
+  					<td name="sea_i"><input placeholder="Enter keyword"></td>
+  					<td name="sea_neutrons"><input placeholder="Enter keyword"></td>
+  					<td name="sea_valancy"><input placeholder="Enter keyword"></td>
+  					<td name="sea_electronegativity"><input placeholder="Enter keyword"></td>
+  					<td name="sea_i"><input placeholder="Enter keyword"></td>
+  			 	</tr>
+  			 </table>
+			 </div>
+		 </div>
+		 <div class="aboutSite">
+		 	<center><div class="exim">
+		 		<button><i class="fa fa-times-circle"></i></button>
+		 		<h1>About Periodic Table</h1>
+		 		<p>
+					Radon Networks (we) created this website to support chemistry students and anyone who likes chemistry(periodic table). We added lot of features so that you can use it without problems. If you think it's complicated, please watch <a href="" class="normal">this youtube video.</a> Lastest updating was on 20th of December, 2018. The resources for the information are Wikipedia, Paul Alan Freshney's periodc table(a software) and Periodic Table(an android app).
+				</p>
+		 	</div></center>
+		 </div>-->
+		 <!--<div id="unitConverterBox">
+			 <div class="toolbarUC">
+			 	<button onclick="document.getElementById('unitConverterBox').style.display='none';"><i class="fa fa-times"></i></button> Unit converter
+			 </div>
+			 <div class="leftSpace">
+				<div class="unitTypes">
+ 					<button class="a">Mass</button>
+					<button>Temperature</button>
+					<button>Length</button>
+					<button>Ratio</button>
+ 			 	</div>
+				<div class="units" id="inputUnits">
+					<div id="unitJMass" class="a">
+						<button name="unit_kg" class="a">kg</button>
+						<button name="unit_g">g</button>
+					</div>
+					<div id="unitJTemperature">
+						<button class="a">K</button>
+						<button>'C</button>
+						<button>'F</button>
+					</div>
+					<div id="unitJLength">
+						<button>nm</button>
+						<button>mm</button>
+						<button>cm</button>
+						<button>m</button>
+						<button class="a">dm</button>
+						<button>km</button>
+					</div>
+					<div id="unitJRatio">
+						<button>Pi</button>
+						<button class="a">Mole</button>
+					</div>
+			 	</div>
+				<div class="spaceHoho">
+					<input id="inputText" placeholder="Enter value" type="number" spellcheck="false"><button id="clearInput">Clear</button>
+				</div>
+				<div id="convertedUnits"></div>
+				<div class="spaceHoho">
+					<input id="outputText" type="number" spellcheck="false">
+				</div>
+			 </div>
+		 </div>-->
+		 <div id="tempConvetContextmenu">
+			 <button id="cnvrtToC"></button>
+			 <button id="cnvrtToK"></button>
+			 <button id="cnvrtToF"></button>
+		 </div>
+     <script type="text/javascript">
+     	//Copy code
+     function copyStringToClipboard (str) {
+          var el = document.createElement('textarea');
+          el.value = str;
+          el.setAttribute('readonly', '');
+          el.style = {position: 'fixed', left: '-9999px'};
+          document.body.appendChild(el);
+          el.select();
+          document.execCommand('copy');
+          document.body.removeChild(el);
+     }
+     //custom alert
+     function alertm(e) {
+          $('body').append('<div class="alertt">'+e+'<br><button>Ok</button></div>');
+          $('#blackWall').fadeIn();
+          setTimeout(function(){
+               $('div.alertt').fadeIn(300);
+               $('div.alertt button').click(function(){
+                    $(this).parent().remove();
+                    $('#blackWall').fadeOut();
+               });
+        }, 20);
+     }
+     function allowDrop(ev) {
+         ev.preventDefault();
+     }
+
+     function drag(ev) {
+         ev.dataTransfer.setData("text", ev.target.id);
+     }
+     function clearData() {
+          localStorage.setItem('num',0);
+          localStorage.setItem('a','');
+          localStorage.setItem('b','');
+          $('div.drop,#combiner div.info').html('');
+          $('#combiner .info').hide();
+          $('drophere').fadeIn();
+     }
+     clearData();
+     function drop(ev) {
+         ev.preventDefault();
+         var data = ev.dataTransfer.getData("text");
+         localStorage.setItem('num',Number(localStorage.num)+1)
+         setTimeout(function() {
+              if (Number(localStorage.num)===1) {
+                   $('.drop').append(function() {
+                   localStorage.setItem('a',data);
+                        return '<span><x>'+eval(data).symbol+'</x></span>';
+                   });
+              }
+              if (Number(localStorage.num)===2) {
+                   localStorage.setItem('b',data);
+                   $('.drop').append(function() {
+                        return '<span><x>'+eval(data).symbol+'</x></span>';
+                   });
+                   setTimeout(function() {
+                        combine();
+                   },500);
+              }
+         },150);
+         $('drophere').hide();
+     }
+     function combine() {
+          var ax=localStorage.a;
+          var bx=localStorage.b;
+          var eA=eval(ax);
+          var eB=eval(bx);
+          var i=Number(eA.valancy);
+          if (i===0) {
+               $('div.drop').html('<warn>Non reactive</warn>')
+          }else {
+               $('.drop').html(function() {
+                    return '<ans>'+eA.symbol+'<sub class="t'+eB.valancy+'"></sub>'+eB.symbol+'<sub class="t'+eA.valancy+'"></sub></ans>';
+               });
+               setTimeout(function() {
+                    $('sub').html(function() {
+                         var i=Number($(this).attr('class').slice(1));
+                         if (i===1) {
+                              return '';
+                         }else {
+                              return $(this).attr('class').slice(1);
+                         }
+                    },500);
+               })
+          }
+          var ev=eval(ax+'_'+eB.valancy+'_'+bx+'_'+eA.valancy+'_');
+          $('#combiner div.info').html(function() {
+               return '<t>Name</t><f>'+ev.name+'</f><t>Color</t><f><span class="ball" style="background:'+ev.color+'"></span>&nbsp; <span>'+ev.colorName+'</span></f><t>Where</t><f>'+ev.where+'</f><t>Uses</t><f> '+ev.uses.split(',').join(',<br>')+'</f>';
+          });
+          $('#combiner .info').show();
+     }
+
+     </script>
+     <script>
+     //Variables for each catagorize
+     var metal={
+     	 Noblex:$('#e2,#e10,#e18,#e36,#e54,#e86,#e118'),
+     	 Alkalix:$('#e3,#e11,#e19,#e37,#e55,#e87,#e119'),
+     	 Alkalinex:$('#e4,#e12,#e20,#e38,#e56,#e88,#e120'),
+     	 Otherx:$('#e1,#e6,#e7,#e8,#e15,#e16,#e34,#e52'),
+     	 Metalloidsx:$('#e5,#e14,#e32,#e33,#e51,#e52,#e84'),
+     	 Halogensx:$('#e9,#e17,#e35,#e53,#e85,#e117'),
+     	 PostTransitionx:$('#e13,#e31,#e49,#e50,#e81,#e82,#e83,#e113,#e114,#e115,#e116'),
+     	 Transitionx:$('#e21,#e22,#e23,#e24,#e25,#e26,#e27,#e28,#e29,#e30,#e39,#e40,#e41,#e42,#e43,#e44,#e45,#e46,#e47,#e48,#e72,#e73,#e74,#e75,#e76,#e77,#e78,#e79,#e80,#e104,#e105,#e106,#e107,#e108,#e109,#e110,#e111,#e112'),
+     	 Lanthanoidsx:$('#e57,#e58,#e59,#e60,#e61,#e62,#e63,#e64,#e65,#e66,#e67,#e68,#e69,#e70,#e71'),
+     }
+     var Noblex=$('#e2,#e10,#e18,#e36,#e54,#e86,#e118');
+     var Alkalix=$('#e3,#e11,#e19,#e37,#e55,#e87,#e119');
+     var Alkalinex=$('#e4,#e12,#e20,#e38,#e56,#e88,#e120');
+     var Otherx=$('#e1,#e6,#e7,#e8,#e15,#e16,#e34,#e52');
+     var Metalloidsx=$('#e5,#e14,#e32,#e33,#e51,#e52,#e84');
+     var Halogensx=$('#e9,#e17,#e35,#e53,#e85,#e117');
+     var PostTransitionx=$('#e13,#e31,#e49,#e50,#e81,#e82,#e83,#e113,#e114,#e115,#e116');
+     var Transitionx=$('#e21,#e22,#e23,#e24,#e25,#e26,#e27,#e28,#e29,#e30,#e39,#e40,#e41,#e42,#e43,#e44,#e45,#e46,#e47,#e48,#e72,#e73,#e74,#e75,#e76,#e77,#e78,#e79,#e80,#e104,#e105,#e106,#e107,#e108,#e109,#e110,#e111,#e112');
+     var Lanthanoidsx=$('#e57,#e58,#e59,#e60,#e61,#e62,#e63,#e64,#e65,#e66,#e67,#e68,#e69,#e70,#e71');
+     var Actinoidsx=$('#e89,#e90,#e91,#e92,#e93,#e94,#e95,#e96,#e97,#e98,#e99,#e100,#e101,#e102,#e103');
+     var Unidentifiedx=$('#e121,#e122,#e123,#e124,#e125,#e126');
+     var Solidx=$('#e3,#e4,#e5,#e6,#e11,#e12,#e13,#e14,#e15,#e16,#e19,#e20,#e21,#e22,#e23,#e24,#e25,#e26,#e27,#e28,#e29,#e30,#e31,#e32,#e33,#e34,#e37,#e38,#e39,#e40,#e41,#e42,#e43,#e44,#e45,#e46,#e47,#e48,#e49,#e50,#e51,#e52,#e53,#e55,#e56,#e71,#e72,#e73,#e74,#e75,#e76,#e77,#e78,#e79,#e81,#e82,#e83,#e84,#e85,#e87,#e88,#e89,#e90,#e91,#e92,#e93,#e94,#e95,#e96,#e97,#e98,#e99,#e100,#e101,#e102,#e103,#e57,#e58,#e59,#e60,#e61,#e62,#e63,#e64,#e65,#e66,#e67,#e68,#e69,#e70');
+     var Liquidx=$('#e35,#e80');
+     var Gasx=$('#e1,#e2,#e10,#e18,#e36,#e54,#e86,#e17,#e7,#e8,#e9');
+     var e57e71='#e57,#e58,#e59,#e60,#e61,#e62,#e63,#e64,#e65,#e66,#e67,#e68,#e69,#e70,#e71';
+     var e89e103='#e89,#e90,#e91,#e92,#e93,#e94,#e95,#e96,#e97,#e98,#e99,#e100,#e101,#e102,#e103';
+     var e121e126="#e121,#e122,#e123,#e124,#e125,#e126";
+     </script>

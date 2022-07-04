@@ -1,0 +1,126 @@
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+input,button {
+	border: none;
+	outline: none;
+	font-family: inherit;
+	background: transparent;
+}
+button {
+	cursor: pointer;
+}
+body {
+	margin: 0;
+	font-family: calibri;
+	background: #cccccc;
+}
+header {
+	background: #aa4515;
+	color: white;
+	position: sticky;
+	top: 0;
+	z-index: 50;
+}
+header * {
+	vertical-align: middle;
+}
+header a {
+	padding: 10px;
+	font-size: 35px;
+}
+form {
+	display: inline-block;
+	width: 35%;
+}
+.per {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 15px;
+}
+header input,header button {
+	background: #eeeeee;
+	padding: 10px;
+	box-sizing: border-box;
+	width: 85%;
+	border-radius: 4px 0px 0px 4px;
+	transition: all .1s ease;
+}
+header input:focus {
+	background: #ffffff;
+}
+header button {
+	border-radius: 0px 4px 4px 0px;
+	width: 15%;
+}
+header button:hover {
+	background: #cccccc;
+}
+#tipue_search_content {
+	position: relative;
+	width: 65%;
+	text-align: left;
+	font-size: 19px;
+	line-height: 1.5;
+	min-height: 100vh;
+	background: white;
+	border-left: 1px solid grey;
+	border-right: 1px solid grey;
+	padding: 15px;
+}
+#tipue_search_results_count {
+	padding: 10px;
+}
+.searchRes {
+	margin: 10px;
+	margin-bottom: 25px;
+	color: #1145ad;
+	border-top: 1px dotted silver;
+	border-bottom: 1px dotted silver;
+	background: #eeeeee;
+}
+.searchRes d {
+	font-weight: bold;
+	padding: 5px 0px;
+	color: #0044aa;
+	font-size: 150%;
+	display: block;
+}
+left {
+	display: inline-block;
+	vertical-align: top;
+	width: 15%;
+	text-align: center;
+	padding: 5px;
+	box-sizing: border-box;
+	color: #000000;
+}
+right {
+	display: inline-block;
+	vertical-align: top;
+	width: 85%;
+	padding-left: 15px;
+	box-sizing: border-box;
+}
+box {
+	position: relative;
+	display: inline-block;
+	border-radius: 6px;
+	width: 100%;
+}
+box i {
+	position: absolute;
+	top: 2px;
+	right: 5px;
+	font-style: normal;
+}
+box b {
+	position: absolute;
+	bottom: 2px;
+	font-weight: normal;
+	right: 5px;
+	font-style: normal;
+}

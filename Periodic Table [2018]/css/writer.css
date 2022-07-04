@@ -1,0 +1,63 @@
+button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+body {
+	margin: 0;
+	font-family: calibri;
+}
+header{
+	background: #3367d3;
+	padding: 10px;
+	color: white;
+	font-size: 34px;
+}
+table {
+	border-collapse: collapse;
+	border-bottom: 1px solid silver;
+}
+table td {
+	text-align: center;
+	padding: 5px;
+	border-left: 1px solid silver;
+}
+div.menu button {
+	background: #dddddd;
+	padding: 3px;
+	border-radius: 2px;
+	min-width: 20px;
+	font-family: times new roman;
+	font-size: 17px;
+}
+div.menu button:hover {
+	background: #ffaa00;
+}
+dot {
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	background: black;
+	border-radius: 50px;
+	vertical-align: middle;
+}
+#document {
+	display: inline-block;
+	width: 700px;
+	min-height: 100vh;
+	margin: 15px;
+	margin-top: 45px;
+	border: 1px solid silver;
+	box-shadow: 1px 1px 10px #787878;
+	padding: 15px;
+	outline: none;
+	box-sizing: border-box;
+	font-size: 20px;
+	text-align: left;
+}
+#document * {
+	outline: none;
+	background: #eeeeee;
+	display: inline-block;
+}

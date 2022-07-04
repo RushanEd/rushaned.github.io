@@ -1,0 +1,153 @@
+<!DOCTYPE html><html>
+<head><title>Hydrogen</title>
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <script src="../../../jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="../../css/element.css">
+     <script src="../../js/colors.js" charset="utf-8"></script>
+     <script src="../../js/elements.js" charset="utf-8"></script>
+     <script src="../../js/element.js" charset="utf-8"></script>
+     <link rel="stylesheet" href="../../../fontawesome-free-5.2.0-web/css/all.min.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+     <link rel="stylesheet" href="../../js/jquery-ui.css">
+     <link rel="stylesheet" href="../../css/autocomplete.css">
+     <script src="../../js/jquery-1.12.4.js"></script>
+     <script src="../../js/jquery-ui.js"></script>
+     <link rel="shortcut icon" href="../../images/tlogo.png">
+     <script type="text/javascript" src="../../js/tipuesearch/tipuesearch_set.js"></script>
+     <script type="text/javascript" src="../../js/tipuesearch/tipuesearch_content.js"></script>
+     <script type="text/javascript" src="../../js/tipuesearch/tipuesearch.min.js"></script>
+     <script type="text/javascript" src="../../js/jquery.autocomplete.min.js"></script>
+     <script type="text/javascript" src="../../js/autocomplete.js"></script>
+</head><body id="e1">
+     <div id="blackWall"></div>
+    <header><a href="../usage.html"><img src="../../images/ref2.png"> HolyUsage</a> <form action="../search.html"><input placeholder="Search elements, scientists, years of discoveries or applications " spellcheck="false" type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required class="searchEngine" autocomplete=off><button><i class="fa fa-search"></i></button></form></header>
+    <div class="mobMenu">
+    	<a href=""><i class="fa fa-list"></i></a>
+    </div>
+    <script>
+         $(document).ready(function() {
+              $('#tipue_search_input').tipuesearch();
+         });
+    </script>
+     <div class="all">
+     	<div class="left">
+          <h3>Elements</h3>
+          <c id="elements"></c>
+     </div><div class="body">
+     	<div class="fixedHeader">
+     		<a href="../usage.html"><i class="fa fa-chevron-left"></i></a> <b> &nbsp; <dta class="e_name"></dta> &nbsp; <dtac class="e_classification"></dtac></b><dtaa></dtaa>
+     	</div>
+          <h1 id="headerName" class="header"></h1>
+          <a href="" class="openIn" target="_blank"><img src="../../images/logo.png" style="height: 35px;vertical-align: middle;"> Open in HolyTable </a>
+          <div class="tags">
+               Tags
+               <a href=""><i class="fa fa-tag"></i>Gas</a>
+               <a href=""><i class="fa fa-tag"></i>Inflammable</a>
+          </div>
+          <div class="pageCon">
+          	<a href="javascript:void(0);" id="print"><i class="fa fa-print"></i> Print</a>
+          </div>
+          <!--For autocomplete suggestions <button id="showb">SHow</button>--> 
+          <div class="tabs">
+          	<button id="tab1T" class="a">Basic</button>
+          	<button id="tab2T">Formulas</button>
+          	<button id="tab3T">Experiments</button>
+          	<button id="tab4T">Videos</button>
+          	<button id="tab5T">Ebooks</button>
+          </div>
+          	<div class="text">
+          <div class="tab" id="tab1">
+          	<h1 id="para1">Brief information</h1>
+          	<p><ind></ind>Hydrogen is the first element in the periodic table and the lightest element as we know. It is highly inflammable(explosive) and therefore people use hydrogen as a fuel. But you won't see a vehicle runs with hydrogen due to it's high reactivity (<i>not in near future</i>). In some occations, hydrogen is used as a fuel. Mostly when we don't think much about safety. </p>
+          	<center><table class="brief">
+          		<tr><td>Atomic number</td><td>1</td></tr>
+          		<tr><td>Symbol</td><td>H</td></tr>
+          		<tr><td>Atomic weight</td><td><dta class="e_relativeAtomicMass"></dta></td></tr>
+          		<tr><td style="color: #3367d3;">Melting point</td><td><dta class="e_liquidIn"></dta></td></tr>
+          		<tr><td style="color: #ae4515;">Boiling point</td><td><dta class="e_gasIn"></dta></td></tr>
+          	</table></center>
+          	<h1 id="para2">Where it's used</h1>
+          	<h3>As a rocket fuel</h3>
+          	<p>Hydrogen is widely used in rocket engineering as a fuel. From the beginning of the rocket to now, still it's fuel is hydrogen (solidified). Hydrogen is the perfect fuel for rocket because of many reasons. </p>
+          	<ul>
+          		<li>Hydrogen releases a massive energy.</li>
+          		<li>It's the lightest element, so it's easy to carry it from here to the space.</li>
+          		<li>Hydrogen can be found easily. </li>
+          		<li>It's eco-friendly. The byproduct of hydrogen flame is, pure water. </li>
+          	</ul>
+          	<p>In rockets, hydrogens are mixed with oxygen, so that it can be fired even in space. Robert Goddard and Constantine Tsiolkovski are both inventors of that method. We still use that.</p>
+          	<imgp src="1.jpeg" caption="Rockets use hydrogen as a fuel"></imgp>
+          	<h3>To fill air baloons</h3>
+          	<p>Back in the days, people used hydrogen to fill air baloons. Baloons had a low density because, hydrogen is less heavier than the atmosphere. So, the baloons lifted up. But today, we don't fill hydrogen to air baloons because, it's not safety. As hydrogen is extremely inflammable, it couldn't be used to lift air bloons. So, people replaced hydrogen with helium which is also light but non reactive.</p>
+          	<h3>Hydrogen bombs</h3>
+          	<p>Hydrogen bombs are more powerful than atom bombs. A hydrogen bomb can destroy every hydrogen atom that is near to it. That's exactly what happens inside the Sun. These bombs are radioactive when they explode.  </p>
+          	<imgp src="3.jpg" caption="Hydrogen bomb"></imgp>
+          	<h3>Hydrogen metal</h3>
+          	<p>Hydrogen metal was made recently by scientists. They are very useful in computer science. A hydrogen metal can be used as a super conducter. It means it doesn't waste energy when electricity flows through it. But, it's still hard to make. </p>
+          	<h1 id="para3">How to make</h1>
+          	<p>You can make hydrogen at home. Just follow the steps given below.</p>
+          	<ol>
+          		<li>Take this </li>
+          		<li>Take that</li>
+          		<li>Do this </li>
+          		<li>Collect the gas</li>
+          		<li>Fire it !</li>
+          	</ol>
+          </div>
+          <div class="tab" id="tab2">
+          	<h1>Formulas</h1>
+          	<p>Hydrogen can be found anywhere. So, it's easy to find hydrogen. But it's hard to seperate it from another compound. In here, we added 6 ways to make hydrogen safety.</p>
+          	<div class="chem">
+          		H<sub>2</sub>O <arrow></arrow> 2H + O
+          	</div>
+          </div>
+          </div>
+          
+          	<div class="pag">
+          		<a href="" id="leftPag"><i class="fa fa-angle-double-left"></i></a>
+          		<a href="" id="rightPag"><i class="fa fa-angle-double-right"></i></a>
+          	</div>
+          	<div class="rels">
+          		<h2>Related elements</h2>
+          		<a href="" id="e2" class="el"></a>
+          		<a href="" id="e3" class="el"></a>
+          		<a href="" id="e4" class="el"></a>
+          	</div>
+          <!--<ptable elem="e1"></ptable><dta class="e_relativeAtomicMass"></dta>-->
+     </div><div class="right">
+          <h1>Content</h1>
+          <j><a href="#mpara1" id="k1">Brief information</a>
+          <a href="#mpara2" id="k2">Where it's used</a>
+          <a href="#mpara3" id="k3">How to make</a>
+     </div>
+     </div>
+     <footer>
+     	All Rights Reserved, 2018 &copy; Copyright Holder<br><br><br>
+     	<CENTER>
+     		<table>
+     		<td>
+     			<a href="">Contact us</a>
+     			<a href="">About us</a>
+     			<a href="">Send feedback</a>
+     			<a href="">Donate</a>
+     		</td>
+     		<td>
+     			<a href="">Aknowledge</a>
+     			<a href="">Sources of information</a>
+     			<a href="">Databases</a>
+     			<a href="">Plugins</a>
+     		</td>
+     		<td>
+     			<a href="">Help</a>
+     			<a href="">Talk page</a>
+     			<a href="">FAQ</a>
+     			<a href="">Terms of use</a>
+     		</td>
+     		<td>
+     			<a href="">Wikipedia</a>
+     			<a href="">More sites like this</a>
+     		</td>
+     	</table>
+     	</CENTER>
+     </footer>

@@ -1,0 +1,10 @@
+button {
+     font-size: 24px;
+     -webkit-user-drag: element;
+}
+div.drop {
+     padding: 10px;
+     border: 1px solid red;
+     margin: 15px;
+     height: 400px;
+}

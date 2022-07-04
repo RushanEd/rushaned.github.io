@@ -1,0 +1,80 @@
+a {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+}
+body * {
+	outline: none;
+	margin: 0;
+}
+button,input {
+	border: none;
+	background: transparent;
+	font-size: inherit;
+	font-family: inherit;
+}
+button {
+	cursor: pointer;
+}
+body {
+	font-family: courier;
+}
+header * {
+	vertical-align: middle;
+}
+header a {
+	padding: 10px;
+}
+header img {
+	height: 45px;
+}
+div.body {
+	font-size: 24px;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: visible;
+	box-sizing: border-box;
+	height: 100vh;
+}
+table {
+	border-collapse: collapse;
+}
+.thead {
+	background: #aaaaaa;
+}
+.sol {
+	background: #454545;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.thead button {
+	padding: 10px;
+}
+.row td {
+	padding: 10px;
+	cursor: text;
+}
+tr td:first-child {
+	position: sticky;
+	left: 0;
+	z-index: 5000;
+	background: white;
+	border-bottom: 1px solid silver;
+	border-top: 1px solid silver;
+	box-sizing: border-box;
+}
+tr:first-child td:first-child {
+	z-index: 50000000;
+}
+tr:first-child td:first-child button {
+	border: none;
+}
+table tr:first-child td{
+	position: sticky;
+	top: 0;
+	z-index: 5000000;
+	background: #dddddd;
+}
+td {
+	border: 1px solid silver;
+}

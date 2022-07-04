@@ -1,0 +1,24 @@
+.autocomplete-suggestions {
+    background: white; 
+    cursor: default; 
+    overflow: auto;
+    box-shadow: 1px 1px 10px black;
+    z-index: 150000000002;
+    position: absolute;
+    padding: 10px 0px;
+    border-radius: 4px;
+}
+.autocomplete-suggestion { 
+    padding: 5px; 
+    font-size: 100%; 
+    white-space: nowrap; 
+    overflow: hidden;
+    font-family: calibri;
+    color: black;
+}
+.autocomplete-selected { 
+    background-color: #dddddd;
+}
+.autocomplete-suggestions strong { 
+    font-weight: bold;
+}

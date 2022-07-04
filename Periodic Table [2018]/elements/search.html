@@ -1,0 +1,73 @@
+<!DOCTYPE html><html>
+<head><title>Search</title>
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <script src="../js/jquery.min.js"></script>
+     <link rel="stylesheet" href="../css/element.css">
+     <script src="../js/colors.js" charset="utf-8"></script>
+     <script src="../js/elements.js" charset="utf-8"></script>
+     <script src="../js/element.js" charset="utf-8"></script>
+     <link rel="stylesheet" href="../../fontawesome-free-5.2.0-web/css/all.min.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+     <link rel="stylesheet" href="../js/jquery-ui.css">
+     <link rel="stylesheet" href="../css/autocomplete.css">
+     <script src="../js/jquery-1.12.4.js"></script>
+     <script src="../js/jquery-ui.js"></script>
+     <link rel="shortcut icon" href="../images/tlogo.png">
+     <script type="text/javascript" src="../js/tipuesearch/tipuesearch_set.js"></script>
+     <script type="text/javascript" src="../js/tipuesearch/tipuesearch_content.js"></script>
+     <script type="text/javascript" src="../js/tipuesearch/tipuesearch.min.js"></script>
+     <script type="text/javascript" src="../js/jquery.autocomplete.min.js"></script>
+     <script type="text/javascript" src="../js/autocomplete.js"></script>
+</head><body id="ep">
+    <header><a href="usage.html"><img src="../images/ref2.png"> HolyUsage</a> <form action="search.html"><input placeholder="Search elements, scientists, years of discoveries or applications " spellcheck="false" type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required class="searchEngine" autocomplete=off><button><i class="fa fa-search"></i></button></form></header>
+    <script>
+         $(document).ready(function() {
+              $('#tipue_search_input').tipuesearch();
+              $('title,h2').html('Search results for '+$('#tipue_search_input').val());
+         });
+    </script>
+     <div class="all">
+     	<div class="left">
+          <h3>Elements</h3>
+          <c id="elements"></c>
+     </div><div class="body">
+     	<h2></h2>
+          <div id="tipue_search_content"></div>
+          <style type="text/css">
+          	div.body {
+          		padding: 15px;
+          	}
+          </style>
+     </div><div class="right">
+
+     </div>
+     </div>
+     <footer>
+     	All Rights Reserved, 2018 &copy; Copyright Holder<br><br><br>
+     	<CENTER>
+     		<table>
+     		<td>
+     			<a href="">Contact us</a>
+     			<a href="">About us</a>
+     			<a href="">Send feedback</a>
+     			<a href="">Donate</a>
+     		</td>
+     		<td>
+     			<a href="">Aknowledge</a>
+     			<a href="">Sources of information</a>
+     			<a href="">Databases</a>
+     			<a href="">Plugins</a>
+     		</td>
+     		<td>
+     			<a href="">Help</a>
+     			<a href="">Talk page</a>
+     			<a href="">FAQ</a>
+     			<a href="">Terms of use</a>
+     		</td>
+     		<td>
+     			<a href="">Wikipedia</a>
+     			<a href="">More sites like this</a>
+     		</td>
+     	</table>
+     	</CENTER>
+     </footer>
