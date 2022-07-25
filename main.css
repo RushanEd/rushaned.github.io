@@ -1,0 +1,37 @@
+@font-face {
+    font-family: f1;
+    src: url(fonts/1.ttf);
+}
+@font-face {
+    font-family: f2;
+    src: url(fonts/2.ttf);
+}
+@font-face {
+    font-family: f3;
+    src: url(fonts/3.ttf);
+}
+@font-face {
+    font-family: f4;
+    src: url(fonts/4.ttf);
+}
+* {
+    outline: none;
+}
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+input,button {
+    background: inherit;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+button {
+    cursor: pointer;
+}
